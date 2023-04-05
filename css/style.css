@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginPage, .registerPage {
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.headingContainer h1 {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.25rem;
+}
+
+.form > div label {
+    font-size: 16px;
+}
+
+.form > div input {
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+}
+
+.form .checkBoxContainer_ForgotPasswordContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form .checkBoxContainer_ForgotPasswordContainer .checkBoxContainer input {
+    accent-color: #ef5e2f;
+}
+
+.form .checkBoxContainer_ForgotPasswordContainer .forgotPasswordContainer a {
+    color: #ef5e2f;
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.form input[type="submit"] {
+    background-color: #ef5e2f;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: hsl(15, 86%, 46%);
+}
+
+.form .checkBoxContainer_ForgotPasswordContainer .forgotPasswordContainer a:hover,
+.createAccountContainer a:hover {
+    color: hsl(15, 86%, 46%);
+}
+
+.createAccountContainer a {
+    color: #ef5e2f;
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.form div label {
+    transform: translateY(20px);
+    transition: all 0.2s ease-in-out;
+}
+
+.form div input:focus + label {
+    transform: translateY(0px);
+}
+
+
+@media screen and (max-width: 767px) {
+    .form .checkBoxContainer_ForgotPasswordContainer {
+        flex-direction: column;
+        align-items: start;
+    }
+}
